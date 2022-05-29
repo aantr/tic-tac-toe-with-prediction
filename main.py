@@ -88,7 +88,7 @@ if __name__ == '__main__':
 	precalc()
 	state=0
 	if input('Чей ход? (1 - ваш, 2 - оппонент): ').strip() == '2':
-		state = choice(move[state])
+		state = inverse(choice(move[state]))
 
 	while 1:
 		print(f'Текущее поле: \tПредикт: {["lose", "draw", "win"][dp[state]]}')
