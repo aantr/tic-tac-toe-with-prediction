@@ -102,6 +102,8 @@ if __name__ == '__main__':
             cur = int(input('Ваш ход: '))
             cur-=1
         state |= 1<<(2*cur)
+        print(f'Текущее поле:')
+        print(state_to_field(state))
         if not move[state]:
             print('End.')
             break
